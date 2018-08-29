@@ -9,7 +9,9 @@ namespace CLinq.Demo.Expressions
     public static class StoreExpressions
     {
         public static Expression<Func<Customer, bool>> CustomerHasOrders => c => c.SalesOrderHeaders.Any();
+
         public static Expression<Func<Store, bool>> HasOrders => s => s.Customers.Any(c => CustomerHasOrders.Pass(c));
+
         public static Expression<Func<Store, bool>> HasCustomers => s => s.Customers.Any();
 
         public static Expression<Func<Store, IEnumerable<SalesOrderHeader>>> OrdersOfStore => s => s.Customers.SelectMany(c => c.SalesOrderHeaders);
