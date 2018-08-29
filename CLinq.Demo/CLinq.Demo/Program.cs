@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CLinq.Demo.Demos;
 
 namespace CLinq.Demo
 {
@@ -10,6 +7,11 @@ namespace CLinq.Demo
     {
         static void Main(string[] args)
         {
+            PersonDemo.Run();
+            BestRevenueStoresDemo.Run();
+            RevenuePerYearDemo.Run();
+
+            Console.In.Read();
         }
     }
 }

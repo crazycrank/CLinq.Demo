@@ -55,12 +55,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Demos\BestRevenueStoresDemo.cs" />
+    <Compile Include="Expressions\PersonExpressions.cs" />
+    <Compile Include="Demos\PersonDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Expressions\RevenuePerYear.cs" />
+    <Compile Include="Expressions\SalesExpressions.cs" />
+    <Compile Include="Expressions\StoreExpressions.cs" />
+    <Compile Include="Demos\RevenuePerYearDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CLinq.Demo.Database\CLinq.Demo.Database.csproj">
+      <Project>{A103B954-C431-45E2-AC44-3CD574B994CF}</Project>
+      <Name>CLinq.Demo.Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
